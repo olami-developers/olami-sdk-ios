@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define Version 1.0
+#define Version 1.1.1
 
 @protocol OlamiRecognizerDelegate <NSObject>
 
