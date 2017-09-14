@@ -3,9 +3,12 @@
 //  OlamiRecognizer
 //
 //  Copyright 2017, VIA Technologies, Inc. & OLAMI Team.
-// 
+//
 //  http://olami.ai
 //
+
+
+#define Version 1.2.1
 
 #import <Foundation/Foundation.h>
 
@@ -28,7 +31,7 @@
 - (void)onError:(NSError *)error;
 
 /*
- * Callback when speech volume changed. 
+ * Callback when speech volume changed.
  * The value will be 0 to 100.
  */
 - (void)onUpdateVolume:(float) volume;
@@ -50,24 +53,24 @@ typedef NS_ENUM(NSInteger, LanguageLocalization) {
     LANGUAGE_TRADITIONA_CHINESE = 1  //繁體中文
 };
 @interface OlamiRecognizer : NSObject
-@property (nonatomic,weak) id<OlamiRecognizerDelegate> delegate;
-@property (nonatomic, assign,readonly) BOOL isRecording;//Check if voice recording is running
--(void)start;//Start voice recording
--(void)stop;//Stop voice recording
--(void)cancel;//Cancel current process
+@property (nonatomic, weak) id<OlamiRecognizerDelegate> delegate;
+@property (nonatomic, assign, readonly) BOOL isRecording;//Check if voice recording is running
+- (void)start;//Start voice recording
+- (void)stop;//Stop voice recording
+- (void)cancel;//Cancel current process
 //Set the language
- -(void)setLocalization:(LanguageLocalization) location;
+- (void)setLocalization:(LanguageLocalization)location;
 /**
  *CUSID;//End-user identifier.
- *appKey;//The 'APP KEY' you have, provided by OLAMI developer service.  
+ *appKey;//The 'APP KEY' you have, provided by OLAMI developer service.
  *api;//API name.
  *appSecret;//The 'APP SECRET' you have, provided by OLAMI developer service.
  */
--(void)setAuthorization:(NSString*)appKey api:(NSString*)api appSecret:(NSString*)appSecret cusid:(NSString*)CUSID;
--(void)setVADTimeoutFrontSIL:(unsigned int)value;//Set timeout of the VAD in milliseconds to stop voice recording automatically. The vaule will be 1000 to 10000, default is 3000.
--(void)setVADTimeoutBackSIL:(unsigned int)value;//Set timeout of the VAD in milliseconds to stop voice recording automatically. The vaule will be 1000 to 10000, default is 2000.
--(void)setInputType:(int) type;//Set 0 for text input, 1 for voice input.
--(void)setLatitudeAndLongitude:(double) latitude longitude:(double)longit;//Set latitude and longitude information
--(void)sendText:(NSString*)text;//Send text to get NLU recognition result.
+- (void)setAuthorization:(NSString*)appKey api:(NSString*)api appSecret:(NSString*)appSecret cusid:(NSString*)CUSID;
+- (void)setVADTimeoutFrontSIL:(unsigned int)value;//Set timeout of the VAD in milliseconds to stop voice recording automatically. The vaule will be 1000 to 10000, default is 3000.
+- (void)setVADTimeoutBackSIL:(unsigned int)value;//Set timeout of the VAD in milliseconds to stop voice recording automatically. The vaule will be 1000 to 10000, default is 2000.
+- (void)setInputType:(int) type;//Set 0 for text input, 1 for voice input.
+- (void)setLatitudeAndLongitude:(double) latitude longitude:(double)longit;//Set latitude and longitude information
+- (void)sendText:(NSString*)text;//Send text to get NLU recognition result.
 @end
 
