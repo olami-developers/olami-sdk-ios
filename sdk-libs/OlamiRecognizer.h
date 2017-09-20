@@ -8,7 +8,7 @@
 //
 
 
-#define Version 1.2.1
+#define Version 1.2.2
 
 #import <Foundation/Foundation.h>
 
