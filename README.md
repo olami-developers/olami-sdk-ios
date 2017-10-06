@@ -1,13 +1,9 @@
-# iOS SDK for OLAMI
+# OLAMI iOS Client SDK
 
-This is a repository that contains OLAMI iOS SDK files and iOS code samples for using OLAMI services, an offering within **OLAMI Open AI**. 
-
-The OLAMI iOS SDK makes it easy to integrate AI features with OLAMI HTTP APIs on iOS devices.
+This is a repository that contains iOS SDK and code examples for using OLAMI HTTP APIs, an offering within **OLAMI Open AI**. 
 
 OLAMI website and documentation: [http://olami.ai](http://olami.ai)
 
-The repo is organized as follows:
+- [简体中文在线说明文档](https://cn.olami.ai/wiki/?mp=sdk&content=sdk/ios/reference.html)
 
-* [SDK Libs](sdk-libs)
-* [Samples](samples)
-  * [Getting Started](samples/getting-started)
+- [繁體中文線上說明文件](https://tw.olami.ai/wiki/?mp=sdk&content=sdk/ios/reference.html)
