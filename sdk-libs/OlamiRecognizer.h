@@ -8,7 +8,7 @@
 //
 
 
-#define Version 1.2.3
+#define Version 1.3.0
 
 #import <Foundation/Foundation.h>
 
@@ -46,15 +46,31 @@
  *
  */
 - (void)onEndOfSpeech;
+
+/**
+ * Callback when ASR failure
+ *
+ */
+- (void)voiceRecognizeFailure;
+
+/**
+ * Callback when ASR Success
+ *
+ */
+- (void)voiceRecognizeSuccess;
 @end
 
 typedef NS_ENUM(NSInteger, LanguageLocalization) {
     LANGUAGE_SIMPLIFIED_CHINESE = 0, //简体中文
     LANGUAGE_TRADITIONA_CHINESE = 1  //繁體中文
 };
+
+
+
 @interface OlamiRecognizer : NSObject
 @property (nonatomic, weak) id<OlamiRecognizerDelegate> delegate;
 @property (nonatomic, assign, readonly) BOOL isRecording;//Check if voice recording is running
+@property (nonatomic, assign, readonly) BOOL isRecognizing;//Check if ASR is running
 - (void)start;//Start voice recording
 - (void)stop;//Stop voice recording
 - (void)cancel;//Cancel current process
