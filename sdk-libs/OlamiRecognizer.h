@@ -8,7 +8,11 @@
 //
 
 
+<<<<<<< HEAD
 #define Version 1.3.7
+=======
+#define Version 1.3.6
+>>>>>>> 071f0617cd9cf90f5b718b7d1f319d43d5b26804
 
 #import <Foundation/Foundation.h>
 
