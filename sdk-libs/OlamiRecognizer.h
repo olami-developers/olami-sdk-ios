@@ -8,7 +8,7 @@
 //
 
 
-#define Version 1.3.5
+#define Version 1.3.7
 
 #import <Foundation/Foundation.h>
 
@@ -16,7 +16,7 @@
 
 @optional
 /**
- * Callback when recognition result returned
+ * Callback when recognition result (with NLI result) returned
  */
 - (void)onResult:(NSData*)result;
 /*
@@ -58,6 +58,14 @@
  *
  */
 - (void)voiceRecognizeSuccess;
+
+/**
+ * Callback when ASR result (only for Speech-To-Text) return
+ *
+ */
+
+- (void)onResultForASR:(NSString*)result;
+
 @end
 
 typedef NS_ENUM(NSInteger, LanguageLocalization) {
